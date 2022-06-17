@@ -48,11 +48,8 @@ document.getElementById('css_class_with_out_dot')
 
 ## TODO
 
-1 - Create a reset password page(email, name, birthdate)
-2 - Create  authentication via email call to validate user
 3 - Create reset password page that receives uuid from back end reset password call
 4 - Create API reset password call
-
 
 ## DONE
 
@@ -62,3 +59,5 @@ document.getElementById('css_class_with_out_dot')
 4 - Change the redux-store calls to redux-thunk to add, delete and display products directly from the API
 5 - Create a component that receives product data from the API using classes
 6 - Create a HOC component to display alerts of warning, error and info
+7 - Create a reset password page(email, name, birthdate)
+8 - Create authentication via email call to validate user

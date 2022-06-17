@@ -44,7 +44,7 @@ const Login = () => {
                 sx={{ bgcolor: 'green', marginTop: 3 }}
                 variant='contained'
                 size="large"
-                onClick={() => navigate('/reset-password')}
+                onClick={() => navigate('/resetpassword')}
             >
                 FORGOT MY PASSWORD?
             </Button>

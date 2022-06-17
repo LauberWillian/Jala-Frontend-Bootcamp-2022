@@ -34,6 +34,14 @@ export class UserService {
         console.log('user service email verification error: ', err)
       })
   }
+  public resetPassword = async (user: any)=>{
+    return this.service
+    .post(url + '/resetpassword', user)
+    .then(response => response.data)
+    .catch(err => {
+      console.log('password reset error:', err);
+    })
+  }
 
 }
 
