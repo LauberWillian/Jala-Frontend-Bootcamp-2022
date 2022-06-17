@@ -1,16 +1,18 @@
 import { Button } from "@mui/material";
 import React, { useState } from "react"
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import IUser from "../interfaces/IUser";
 import { UserToken } from '../auth/userToken';
 import userService from "../services/userService";
 
 const NewPassword = () => {
+    const token = useParams();
     const [user, setUser] = useState({  password: '' } as IUser)
     const navigate = useNavigate();
+ 
 
     const handleReset = async () => {
-        const response: any = await userService.resetPassword(user);
+        const response: any = await userService.resetPassword(user, token);
         console.log(response.data);
         // navigate('/')
     }
@@ -21,7 +23,7 @@ const NewPassword = () => {
             <input
                 value={user.password}
                 placeholder="your password"
-                onChange={(e) => setUser({ ...user, email: e.target.value })}
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
             />
             <br />
             <Button

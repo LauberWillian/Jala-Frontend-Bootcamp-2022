@@ -14,6 +14,7 @@ import Signup from "../pages/signup";
 import Stock from "../pages/stock";
 import User from "../pages/user";
 import VerifyEmail from "../pages/verifyEmail";
+import NewPassword from "../pages/newPassword";
 
 const Main: React.FC = () => {
 
@@ -36,6 +37,7 @@ const Main: React.FC = () => {
                     <Route path='/signup' element={<Signup />} />
                     <Route path='/please-very' element={<EmailVerification />} />
                     <Route path='/verify-email/:verificationCode' element={<VerifyEmail />} />
+                    <Route path='/new-password/:verificationCode' element={<NewPassword />} />
                     <Route path='*' element={<NotFound />} />
 
                 </Routes>
